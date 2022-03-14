@@ -23,6 +23,7 @@ def Test():
             'preferredquality': '192k'
         }],
         'postprocessor_args': [
+            '-ar', '160000',
             '-ac', '1'
         ],
     }
