@@ -74,10 +74,12 @@ def Opus():
     def remove_file(response):
         try:
             os.remove(name)
+            os.remove("Files/" + str(id) + ".ogg")
         except Exception as error:
             app.logger.error("Error removing or closing downloaded file handle", error)
         return response
     return flask.send_file("Files/" + str(id) + ".ogg")
+
 
 if __name__ == "__main__":
     app.run('0.0.0.0', 8080)
